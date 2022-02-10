@@ -11,7 +11,7 @@ router.get('/notes', (req, res) => {
     res.json(db)
 });
 
-// // add post request here which adds info
+// add post request here which adds info
 router.post('/notes', (req, res) => {
     const { title, text } = req.body;
     // set a unique id to the note being written 
@@ -29,12 +29,15 @@ router.post('/notes', (req, res) => {
 // deleting note route 
 router.delete('/notes/:id', (req, res) => {
     let newDb = []
+    // runs loop over notes
     for (let i = 0; i < db.length; i++) {
         // if id doesnt match the one we want to delete - it gets pushed into newdb 
         if (db[i].id !=req.params.id) {
             newDb.push(db[i])
         }
     }
+    // let allows us to set db as newdb 
+    // let is crazy!
     db = newDb
     fs.writeFile('./db/db.json', JSON.stringify(db, null, 3), (err) => {
         if (err) throw err;
