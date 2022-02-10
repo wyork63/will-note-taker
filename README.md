@@ -6,6 +6,7 @@
 ## Description 
 A simple notetaker app created using the express package on Node.js.
 Given starter code then added apirRoutes, htmlRoutes, and a server.js file to operate the application. 
+starter code forked from [here](https://github.com/coding-boot-camp/miniature-eureka)
 
 ## Installation
 Copy the code and run NPM install to run on local machine,
@@ -15,6 +16,9 @@ Click on the deployed link and take some notes! Once you type a title and body a
 The red trash can deletes the note. 
 Click the plus in the upper right hand corner to create a new note. 
 
+
+## Image of deployed application
+![Screenshot of Deployed App](images/note-taker.png)
 
 ## License 
 Using the MIT License
